@@ -1037,7 +1037,7 @@ export default function Home() {
               </ul>
               <div class="mt-12">
                 <a
-                  class="inline-flex items-center font-medium leading-tight text-slate-200 font-semibold text-slate-200 group"
+                  class="inline-flex items-center font-medium leading-tight text-slate-200 group"
                   aria-label="View Full Project Archive"
                   href="/archive"
                 >
