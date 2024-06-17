@@ -695,9 +695,8 @@ export default function Home() {
                     aria-label="View Full Résumé (opens in a new tab)"
                   >
                     <span>
-                      View Full
+                      View Full{" "}
                       <span className="inline-block">
-                        {" "}
                         Résumé
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
