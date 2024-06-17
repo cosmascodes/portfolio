@@ -1,13 +1,16 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
+  const pathname = usePathname();
   return (
     <main className="min-h-screen">
       <section className="max-w-screen-xl mx-auto grid md:grid-cols-2">
         <div className="relative">
           <div className="md:fixed p-5 pt-12 lg:flex lg:h-screen lg:flex-col lg:justify-between lg:py-24">
             <div>
-              <h1 className="font-bold text-5xl">Brittany Chiang</h1>{" "}
+              <h1 className="font-bold text-5xl">Cosmas Ngeno</h1>
               <p className="font-medium text-xl mt-3">
                 Senior Frontend Engineer
               </p>
@@ -58,7 +61,7 @@ export default function Home() {
               <li class="mr-5 text-xs shrink-0">
                 <a
                   class="block hover:text-slate-200"
-                  href="https://github.com/bchiang7"
+                  href="https://github.com/cosmascodes"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="GitHub (opens in a new tab)"
@@ -79,7 +82,7 @@ export default function Home() {
               <li class="mr-5 text-xs shrink-0">
                 <a
                   class="block hover:text-slate-200"
-                  href="https://www.linkedin.com/in/bchiang7/"
+                  href="https://www.linkedin.com/in/"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="LinkedIn (opens in a new tab)"
@@ -100,7 +103,7 @@ export default function Home() {
               <li class="mr-5 text-xs shrink-0">
                 <a
                   class="block hover:text-slate-200"
-                  href="https://codepen.io/bchiang7"
+                  href="https://codepen.io/"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="CodePen (opens in a new tab)"
@@ -128,7 +131,7 @@ export default function Home() {
               <li class="mr-5 text-xs shrink-0">
                 <a
                   class="block hover:text-slate-200"
-                  href="https://instagram.com/bchiang7"
+                  href="https://instagram.com/"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Instagram (opens in a new tab)"
@@ -149,7 +152,7 @@ export default function Home() {
               <li class="mr-5 text-xs shrink-0">
                 <a
                   class="block hover:text-slate-200"
-                  href="https://twitter.com/bchiang7"
+                  href="https://twitter.com/"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Twitter (opens in a new tab)"
@@ -173,7 +176,7 @@ export default function Home() {
               <li class="mr-5 text-xs shrink-0">
                 <a
                   class="block hover:text-slate-200"
-                  href="https://www.goodreads.com/user/show/143480747-brittany-chiang"
+                  href="https://www.goodreads.com/"
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Goodreads (opens in a new tab)"
@@ -269,7 +272,7 @@ export default function Home() {
                 </a>
                 . I most enjoy building software in the sweet spot where design
                 and engineering meet — things that look good but are also built
-                well under the hood. In my free time, I've also released an{" "}
+                well under the hood. In my free time, I&apos;ve also released an{" "}
                 <a
                   class="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300"
                   href="https://www.newline.co/courses/build-a-spotify-connected-app"
