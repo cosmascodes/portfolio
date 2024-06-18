@@ -47,11 +47,13 @@ export default function Home() {
         <div className="relative">
           <div className="md:fixed p-5 pt-12 lg:flex lg:h-screen lg:flex-col lg:justify-between lg:py-24">
             <div>
-              <h1 className="font-bold text-5xl">Cosmas Ngeno</h1>
-              <p className="font-medium text-xl mt-3">
+              <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+                Cosmas Ngeno
+              </h1>
+              <h2 class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
                 Senior Frontend Engineer
-              </p>
-              <p className="text-text mt-4 w-72">
+              </h2>
+              <p class="mt-4 max-w-xs leading-normal">
                 I build pixel-perfect, engaging, and accessible digital
                 experiences.
               </p>
