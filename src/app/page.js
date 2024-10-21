@@ -1,12 +1,34 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Nav from "./components/nav";
 
 export default function Home() {
-  let [activeSection, setActiveSection] = useState("about");
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const mouseDivRef = useRef(null);
 
-  let links = ["about", "experience", "projects"];
+  useEffect(() => {
+    // Mouse move event listener
+    const handleMouseMove = (e) => {
+      // Get the dimensions of the mouse follower element
+      const mouseDiv = mouseDivRef.current;
+      if (mouseDiv) {
+        const offsetX = mouseDiv.offsetWidth / 3.5;
+        const offsetY = mouseDiv.offsetHeight / 3.5;
 
+        // Set the mouse position minus the offset to center it
+        setMousePosition({ x: e.clientX - offsetX, y: e.clientY - offsetY });
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const [activeSection, setActiveSection] = useState("about");
+  const links = ["about", "experience", "projects"];
   useEffect(() => {
     let about = document.getElementById("about");
     let experience = document.getElementById("experience");
@@ -43,6 +65,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
+      <div
+        ref={mouseDivRef}
+        id="mouse"
+        style={{
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+        }}
+        className={`bg-gradient-radial pointer-events-none fixed inset-0 -z-30 transition duration-100`}
+      ></div>
       <section className="max-w-screen-xl mx-auto grid md:grid-cols-2">
         <div className="relative">
           <div className="md:fixed p-5 pt-12 lg:flex lg:h-screen lg:flex-col lg:justify-between lg:py-24">
