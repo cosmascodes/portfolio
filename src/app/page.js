@@ -12,8 +12,8 @@ export default function Home() {
       // Get the dimensions of the mouse follower element
       const mouseDiv = mouseDivRef.current;
       if (mouseDiv) {
-        const offsetX = mouseDiv.offsetWidth / 3.5;
-        const offsetY = mouseDiv.offsetHeight / 3.5;
+        const offsetX = mouseDiv.offsetWidth / 3.2;
+        const offsetY = mouseDiv.offsetHeight / 3.2;
 
         // Set the mouse position minus the offset to center it
         setMousePosition({ x: e.clientX - offsetX, y: e.clientY - offsetY });
